@@ -11,6 +11,11 @@ N - NodeJS
 - Install NodeJS
 - Open NodeJS commandPompt and navigate to 'MEANSample\app'
 - Run: 'npm install express'
+
+At this point a folder named 'node-modules' must exist in the same directory
+
+![Server running](images/node-modules_Folder.PNG)
+
 - Run: 'node server'
 
 At this point you should see message: "Server running in port 3000"
