@@ -6,11 +6,16 @@ E - Express
 A - AngularJS 
 N - NodeJS  
 
-## How to run it
+## Prerequisites:
 
-- Install NodeJS
+ - NodeJS.
+ - MongoDB running in the default port 27017.
+
+## How to run it:
+
 - Open NodeJS commandPompt and navigate to 'MEANSample\app'
 - Run: 'npm install express'
+- Run: 'npm install mongojs'
 
 At this point a folder named 'node-modules' must exist in the same directory
 
