@@ -14,9 +14,7 @@ N - NodeJS
 ## How to run it:
 
 - Open NodeJS commandPompt and navigate to 'MEANSample\app'
-- Run: 'npm install express'
-- Run: 'npm install mongojs'
-- Run: 'npm install body-parser'
+- Run: 'npm install'
 
 At this point a folder named 'node-modules' must exist in the same directory
 
