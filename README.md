@@ -20,7 +20,7 @@ At this point a folder named 'node-modules' must exist in the same directory
 
 ![Server running](images/node-modules_Folder.PNG)
 
-- Run: 'node server'
+- Run: 'npm start'
 
 At this point you should see message: "Server running in port 3000"
 
