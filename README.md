@@ -6,6 +6,8 @@ E - Express
 A - AngularJS 
 N - NodeJS  
 
+Further reference: https://meanjs.org/
+
 ## Prerequisites:
 
  - NodeJS.
