@@ -33,10 +33,6 @@ app.post('/contactlist', function(req, res) {
 	console.log("I received a POST request");
 	console.log(req.body);
 	
-	if(req.body._id){
-		req.body._id = mongojs.ObjectId(req.body.id);
-	}
-
 	db.contactList.insert(req.body, function(err, doc){
 		res.json(doc);
 	});
@@ -46,12 +42,14 @@ app.post('/contactlist', function(req, res) {
 // Updating existing contact
 app.put('/contactlist/:id', function(req, res) {
 	console.log("I received a PUT request");
-	console.log(req.body);
+	console.log(req.body.name);
 	
-	// db.contactList.update("_id": mongojs.ObjectId(req.params.id)}, req.body, function(err, doc){
-	// 	res.json(doc);
-	// });
-	
+	var id = req.params.id;
+	db.contactList.findAndModify({query: {_id : mongojs.ObjectId(id)},
+		update: {$set: {name: req.body.name, email: req.body.email, number: req.body.number}}, 
+		new: true}, function(err, doc){
+			res.json(doc);
+		});	
 });
 
 // Deleting contact

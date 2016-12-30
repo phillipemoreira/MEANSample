@@ -13,6 +13,20 @@ app.controller('appController', function($scope, $http) {
 	$scope.addContact = function(){
 		console.log("I will try to add the following contact");
 		console.log($scope.contact);
+
+		// If $scope.contact._id is filled, it means
+		// that the user has clicked edit + add contact, instead of
+		// edit + update. this means that if we do not clear the _id, 
+		// the server will create an object with a wrong id.
+		if ($scope.contact._id){
+			$scope.contact = {
+				name: $scope.contact.name,
+				email: $scope.contact.email,
+				number: $scope.contact.number
+			};
+		}
+		//In a real life app, there would be some validation at server side too.
+
 		$http.post('/contactList', $scope.contact).then(function(response){
 			console.log("the server sent back the followingg info:");
 			console.log(response.data);
