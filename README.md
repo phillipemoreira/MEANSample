@@ -15,7 +15,7 @@ Further reference: https://meanjs.org/
 
 ## How to run it:
 
-- Open NodeJS commandPompt and navigate to 'MEANSample\app'
+- Open NodeJS commandPompt and navigate to 'MEANSample\contact-list\app'
 - Run: 'npm install'
 - Run: 'npm start'
 
