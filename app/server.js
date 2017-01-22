@@ -69,27 +69,42 @@ app.delete('/contactlist/:id', function(req, res){
 	});
 });
 
-function populateDB() {
-	var contactsInserted = false;
-	var contacts = JSON.parse(fs.readFileSync('./dummy-contacts/contacts.json', 'utf8'));
-
-	contacts.forEach(function(element, index) {
-		db.contactList.findOne({"name": element.name}, function(err, docs){
-			if (!docs){
-				if (index == 0){
-					console.log('populating database with contacts.' );
-				}
-				db.contactList.insert(element, function(err, doc){
-					if (err) throw err;
-				});			
-			}
-		});
+// Database initialization
+function initializeDB() {
+	db.runCommand({listCollections: 1}, function(err, res){
+		if (res.cursor.firstBatch.length == 0){
+			populateDB();
+		}
 	});
 };
 
+function populateDB(argument) {
+	console.log('populating database with contacts.' );
+	
+	var contacts = JSON.parse(fs.readFileSync('./dummy-contacts/contacts.json', 'utf8'));
+	
+	contacts.forEach(function(element, index) {
+		insertContacts(element, index, contacts.length - 1);
+	});
+}
+
+function insertContacts(element, index, numberOfContacts){
+	db.contactList.findOne({"name": element.name}, function(err, docs){
+		if (!docs){
+			db.contactList.insert(element, function(err, doc){
+				if (err) throw err;
+				
+				if (index == numberOfContacts){
+					console.log(index + 1 + ' contacts inserted.');
+				}
+			});			
+		}
+	});
+}
 
 app.listen(3000);
+initializeDB();
 console.log("Server running in port 3000");
-populateDB();
+
 
 
