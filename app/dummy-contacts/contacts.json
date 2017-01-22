@@ -1,0 +1,20 @@
+[{
+	"name": "Harry Potter",
+	"email": "harry.potter@hogwarts.org",
+	"number": "(123) 444-1234"
+},
+{
+	"name": "John Travolta",
+	"email": "j.dancer@greaze.com",
+	"number": "(321) 512-9887"
+},
+{
+	"name": "Cthulhu",
+	"email": "sea.monster@gmail.com",
+	"number": "(666) 666-4567"
+},
+{
+	"name": "Sponge Bob",
+	"email": "square.pants@bikini.com",
+	"number": "(421) 653-9812"
+}]

@@ -3,6 +3,7 @@ var app = express();
 var mongojs = require('mongojs');
 var db = mongojs('contactList',['contactList']);
 var bodyParser = require('body-parser');
+var fs = require('fs');
 
 
 app.use(express.static(__dirname + "/client"));
@@ -68,5 +69,27 @@ app.delete('/contactlist/:id', function(req, res){
 	});
 });
 
+function populateDB() {
+	var contactsInserted = false;
+	var contacts = JSON.parse(fs.readFileSync('./dummy-contacts/contacts.json', 'utf8'));
+
+	contacts.forEach(function(element, index) {
+		db.contactList.findOne({"name": element.name}, function(err, docs){
+			if (!docs){
+				if (index == 0){
+					console.log('populating database with contacts.' );
+				}
+				db.contactList.insert(element, function(err, doc){
+					if (err) throw err;
+				});			
+			}
+		});
+	});
+};
+
+
 app.listen(3000);
 console.log("Server running in port 3000");
+populateDB();
+
+

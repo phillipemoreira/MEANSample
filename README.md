@@ -17,11 +17,6 @@ Further reference: https://meanjs.org/
 
 - Open NodeJS commandPompt and navigate to 'MEANSample\app'
 - Run: 'npm install'
-
-At this point a folder named 'node-modules' must exist in the same directory
-
-![Server running](images/node-modules_Folder.PNG)
-
 - Run: 'npm start'
 
 At this point you should see message: "Server running in port 3000"
