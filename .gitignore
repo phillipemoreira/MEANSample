@@ -1,4 +1,5 @@
 app/contact-list/node_modules
+app/todo/node_modules
 
 npm-debug.log
 app/npm*
