@@ -19,6 +19,6 @@ module.exports = function(){
 	});
 
 	app.listen(PORT, function(){
-		console.log("server running on " + PORT);
+		console.log("TODO app running in port " + PORT + ".");
 	});
 }

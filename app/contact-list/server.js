@@ -104,7 +104,7 @@ module.exports = function(){
 
 	app.listen(3000);
 	initializeDB();
-	console.log("Server running in port 3000.");
+	console.log("Contact-list app running in port 3000.");
 }
 
 
