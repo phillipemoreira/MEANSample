@@ -1,0 +1,27 @@
+{
+  "name": "@phillipemoreira/multiple-mean-apps",
+  "version": "1.0.0",
+  "description": "Simple MEAN applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phillipemoreira/meansample.git"
+  },
+  "keywords": [
+    "MEAN"
+  ],
+  "author": "Phillipe Moreira (phillipealexmoreira@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "contact-list": "file: ./contact-list",
+    "todo": "file: ./todo" 
+  },
+  "bugs": {
+    "url": "https://github.com/phillipemoreira/meansample/issues"
+  },
+  "homepage": "https://github.com/phillipemoreira/meansample#readme"
+}

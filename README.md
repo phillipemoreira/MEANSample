@@ -15,17 +15,19 @@ Further reference: https://meanjs.org/
 
 ## How to run it:
 
-- Open NodeJS commandPompt and navigate to 'MEANSample\contact-list\app'
+- Open NodeJS commandPompt and navigate to 'MEANSample\app'
 - Run: 'npm install'
 - Run: 'npm start'
 
-At this point you should see message: "Server running in port 3000"
+At this point you should see message: "Server running in port 3000" and "Server running in port 3001",
+contact-list and todo app respectively.
 
-![Server running](images/nodeRunning.PNG)
+![Server running](images/app-running.PNG)
 
-- Open your browser and go to 'localhost:3000'
+- Open your browser and go to 'localhost:3000' to use the contat-list app.
 
-Now you should be able to see the Contact List App:
+![Client running](images/contact-list-running.PNG)
 
-![Client running](images/clientRunning.PNG)
+- Open your browser and go to 'localhost:3001' to use the todo app.
 
+![Client running](images/todo-running.PNG)
