@@ -18,8 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
-    "contact-list": "file: ./contact-list",
-    "todo": "file: ./todo" 
+    "contact-list": "file:./contact-list",
+    "todo": "file:./todo" 
   },
   "bugs": {
     "url": "https://github.com/phillipemoreira/meansample/issues"
