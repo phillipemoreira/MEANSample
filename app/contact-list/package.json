@@ -1,5 +1,5 @@
 {
-  "name": "meansample",
+  "name": "@phillipemoreira/contact-list",
   "version": "1.0.0",
   "description": "Simple M.E.A.N application",
   "main": "server.js",
