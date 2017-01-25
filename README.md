@@ -22,12 +22,12 @@ Further reference: https://meanjs.org/
 At this point you should see message: "Server running in port 3000" and "Server running in port 3001",
 contact-list and todo app respectively.
 
-       ![Server running](images/app-running.png)
+![Server running](images/app-running.png)
 
 - Open your browser and go to 'localhost:3000' to use the contat-list app.
 
-       ![Client running](images/contact-list-running.png)
+![Client running](images/contact-list-running.png)
 
 - Open your browser and go to 'localhost:3001' to use the todo app.
 
-       ![Client running](images/todo-running.png)
+![Client running](images/todo-running.png)
